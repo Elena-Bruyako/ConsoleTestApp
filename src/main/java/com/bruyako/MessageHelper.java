@@ -5,8 +5,8 @@ import com.bruyako.utils.Const;
 import com.bruyako.utils.PathHelper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.apache.log4j.Logger;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -16,6 +16,8 @@ import java.nio.file.Paths;
  * Created by brunyatko on 09.03.16.
  */
 public class MessageHelper {
+
+    private static final Logger log = Logger.getLogger(MessageHelper.class);
 
     public String getDate(int hours) {
 
@@ -43,10 +45,12 @@ public class MessageHelper {
             try {
                 return getResources(PathHelper.getDefaultPath());
             } catch (IOException exception){
+                log.info("Localization not found. Default localization was used.");
                 return Const.getDefaultResources();
             }
 
         } catch (IOException e) {
+            log.info("An IOException was caught.");
             return Const.getDefaultResources();
         }
     }
