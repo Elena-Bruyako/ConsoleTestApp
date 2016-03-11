@@ -1,19 +1,15 @@
 package com.bruyako;
 
-import java.util.Calendar;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by brunyatko on 09.03.16.
  */
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
 
-        Calendar date = Calendar.getInstance();
-        int hours = date.get(Calendar.HOUR_OF_DAY);
-
-        MessageHelper messageHelper = new MessageHelper();
-        System.out.println(messageHelper.getDate(hours));
-
+        Message message = new Message();
+        System.out.println(message.getMessage());
     }
 }
