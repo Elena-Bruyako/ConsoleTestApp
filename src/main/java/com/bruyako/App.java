@@ -9,7 +9,7 @@ public class App {
 
     public static void main(String[] args) throws UnsupportedEncodingException {
 
-        Message message = new Message();
-        System.out.println(message.getMessage());
+        MessageService messageService = new MessageService();
+        System.out.println(messageService.getMessage());
     }
 }
