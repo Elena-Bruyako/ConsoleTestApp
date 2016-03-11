@@ -16,17 +16,13 @@ public class Message {
     public String getMessage() throws UnsupportedEncodingException {
 
         if (hours >= 6 && hours <= 9) {
-            String morning = getResourceBundle().getString("morning");
-            return new String(morning.getBytes("ISO-8859-1"), "UTF-8");
+            return getStringByKey("morning");
         } else if (hours >= 9 && hours <= 19) {
-            String day = getResourceBundle().getString("day");
-            return new String(day.getBytes("ISO-8859-1"), "UTF-8");
+            return getStringByKey("day");
         } else if (hours >= 19 && hours <= 23) {
-            String evening = getResourceBundle().getString("evening");
-            return new String(evening.getBytes("ISO-8859-1"), "UTF-8");
+            return getStringByKey("evening");
         } else {
-            String night = getResourceBundle().getString("night");
-            return new String(night.getBytes("ISO-8859-1"), "UTF-8");
+            return getStringByKey("night");
         }
     }
 
@@ -34,5 +30,10 @@ public class Message {
         Locale currentLocale = Locale.getDefault();
         ResourceBundle rb = ResourceBundle.getBundle("message", currentLocale);
         return rb;
+    }
+
+    private String getStringByKey(String key) throws UnsupportedEncodingException {
+        String value = getResourceBundle().getString(key);
+        return new String(value.getBytes("ISO-8859-1"), "UTF-8");
     }
 }

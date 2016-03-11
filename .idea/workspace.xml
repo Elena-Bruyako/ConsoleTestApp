@@ -26,8 +26,8 @@
       <file leaf-file-name="Message.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bruyako/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.725" vertical-offset="0" max-vertical-offset="615">
-              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.775" vertical-offset="0" max-vertical-offset="630">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -66,11 +66,11 @@
         <option value="$PROJECT_DIR$/resource/message.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/message_en_US.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bruyako/Message.java" />
         <option value="$PROJECT_DIR$/resource/log_file.log" />
         <option value="$PROJECT_DIR$/src/main/java/com/bruyako/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/message_ru_UA.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bruyako/Message.java" />
       </list>
     </option>
   </component>
@@ -282,7 +282,7 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.bruyako.App" />
-      <option name="VM_PARAMETERS" value="-Duser.country=UA -Duser.language=ru" />
+      <option name="VM_PARAMETERS" value="-Duser.country=RU -Duser.language=ru" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -598,12 +598,12 @@
       <workItem from="1457684163914" duration="6597000" />
       <workItem from="1457690975435" duration="118000" />
       <workItem from="1457692135071" duration="1953000" />
-      <workItem from="1457716827144" duration="426000" />
+      <workItem from="1457716827144" duration="2304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42300000" />
+    <option name="totallyTimeSpent" value="44178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -861,8 +861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bruyako/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.725" vertical-offset="0" max-vertical-offset="615">
-          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.775" vertical-offset="0" max-vertical-offset="630">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="33" />
           <folding />
         </state>
       </provider>
