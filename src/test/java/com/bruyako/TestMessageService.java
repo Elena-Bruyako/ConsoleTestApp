@@ -19,7 +19,7 @@ import static org.junit.Assert.assertEquals;
  * Created by brunyatko on 11.03.16.
  */
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({Calendar.class, Locale.class, MessageService.class})
+@PrepareForTest({Calendar.class, MessageService.class})
 public class TestMessageService {
 
     private static final String DEF_NIGHT = "Good night, World!";
@@ -36,9 +36,7 @@ public class TestMessageService {
 
     @Before
     public void setUp(){
-        mockStatic(Locale.class);
         mockStatic(Calendar.class);
-
         when(Calendar.getInstance(new Locale("ru","UA"))).thenReturn(mockCalendar);
     }
 
@@ -84,9 +82,8 @@ public class TestMessageService {
 
     private void baseTest(Locale locale, int hours, String expectedMessage) throws Exception{
         Mockito.when(mockCalendar.get(Calendar.HOUR_OF_DAY)).thenReturn(hours);
-        when(Locale.getDefault()).thenReturn(locale);
+        Locale.setDefault(locale);
 
         assertEquals(expectedMessage, new MessageService().getMessage());
     }
-
 }

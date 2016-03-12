@@ -20,11 +20,11 @@ public class MessageService {
     }
 
     private String getLocalizableMessage(int hours) throws UnsupportedEncodingException {
-        if (hours >= 6 && hours <= 9) {
+        if (hours >= 6 && hours < 9) {
             return getStringByKey(locale, "morning");
-        } else if (hours >= 9 && hours <= 19) {
+        } else if (hours >= 9 && hours < 19) {
             return getStringByKey(locale, "day");
-        } else if (hours >= 19 && hours <= 23) {
+        } else if (hours >= 19 && hours < 23) {
             return getStringByKey(locale, "evening");
         } else {
             return getStringByKey(locale, "night");
