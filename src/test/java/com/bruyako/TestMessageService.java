@@ -4,8 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.mockito.cglib.core.Local;
-import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -24,10 +22,10 @@ import static org.junit.Assert.assertEquals;
 @PrepareForTest({Calendar.class, Locale.class, MessageService.class})
 public class TestMessageService {
 
-    private static final String EN_NIGHT = "Good night, World!";
-    private static final String EN_MORNING = "Good morning, World!";
-    private static final String EN_DAY = "Good day, World!";
-    private static final String EN_EVENING = "Good evening, World!";
+    private static final String DEF_NIGHT = "Good night, World!";
+    private static final String DEF_MORNING = "Good morning, World!";
+    private static final String DEF_DAY = "Good day, World!";
+    private static final String DEF_EVENING = "Good evening, World!";
 
     private static final String RU_NIGHT = "Доброй ночи, Мир!";
     private static final String RU_MORNING = "Доброе утро, Мир!";
@@ -45,27 +43,42 @@ public class TestMessageService {
     }
 
     @Test
-    public void testEnNight() throws Exception {
-
+    public void testGetMessageDefaultNight() throws Exception {
+        baseTest(new Locale("no", "NO"), 3, DEF_NIGHT);
     }
 
     @Test
-    public void testRuNight() throws Exception {
+    public void testGetMessageDefaultMorning() throws Exception {
+        baseTest(new Locale("no", "NO"), 7, DEF_MORNING);
+    }
+
+    @Test
+    public void testGetMessageDefaultDay() throws Exception {
+        baseTest(new Locale("no", "NO"), 13, DEF_DAY);
+    }
+
+    @Test
+    public void testGetMessageDefaultEvening() throws Exception {
+        baseTest(new Locale("no", "NO"), 21, DEF_EVENING);
+    }
+
+    @Test
+    public void testGetMessageRuNight() throws Exception {
         baseTest(new Locale("ru", "RU"), 2, RU_NIGHT);
     }
 
     @Test
-    public void testRuMorning() throws Exception {
+    public void testGetMessageRuMorning() throws Exception {
         baseTest(new Locale("ru", "RU"), 8, RU_MORNING);
     }
 
     @Test
-    public void testRuDay() throws Exception {
+    public void testGetMessageRuDay() throws Exception {
         baseTest(new Locale("ru", "RU"), 12, RU_DAY);
     }
 
     @Test
-    public void testRuEvening() throws Exception {
+    public void testGetMessageRuEvening() throws Exception {
         baseTest(new Locale("ru", "RU"), 20, RU_EVENING);
     }
 

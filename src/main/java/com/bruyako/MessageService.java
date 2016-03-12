@@ -16,10 +16,10 @@ public class MessageService {
     public String getMessage() throws UnsupportedEncodingException {
         int hours = date.get(Calendar.HOUR_OF_DAY);
 
-        return getLocalizebleMessage(hours);
+        return getLocalizableMessage(hours);
     }
 
-    private String getLocalizebleMessage(int hours) throws UnsupportedEncodingException {
+    private String getLocalizableMessage(int hours) throws UnsupportedEncodingException {
         if (hours >= 6 && hours <= 9) {
             return getStringByKey(locale, "morning");
         } else if (hours >= 9 && hours <= 19) {
