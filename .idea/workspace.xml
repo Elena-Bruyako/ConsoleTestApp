@@ -59,6 +59,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/log_file.log" />
         <option value="$PROJECT_DIR$/src/main/java/com/bruyako/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -598,12 +599,12 @@
       <workItem from="1457692135071" duration="1953000" />
       <workItem from="1457716827144" duration="3978000" />
       <workItem from="1457726267897" duration="7669000" />
-      <workItem from="1457797308460" duration="12226000" />
+      <workItem from="1457797308460" duration="12835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65747000" />
+    <option name="totallyTimeSpent" value="66356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -975,6 +976,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
